@@ -3,7 +3,6 @@
 import { useState } from "react";
 import styles from "./links.module.css";
 import NavLink from "./navLink/navLink";
-import Image from "next/image";
 import { handleLogout } from "@/lib/action";
 
 const links = [
@@ -51,14 +50,29 @@ const Links = ({ session }) => {
           <NavLink item={{ title: "Login", path: "/login" }} />
         )}
       </div>
-      <Image
+      <svg
         className={styles.menuButton}
-        src="/menu.png"
-        alt=""
-        width={30}
-        height={30}
-        onClick={() => setOpen((prev) => !prev)}
-      />
+        onClick={() => {
+          setOpen((prev) => !prev);
+        }}
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        style={{
+          width: "24px",
+          height: "24px",
+          strokeWidth: "1.5px",
+          cursor: "pointer",
+        }}
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"
+          style={{ stroke: "currentColor" }}
+        />
+      </svg>
+
       {open && (
         <div className={styles.mobileLinks}>
           {links.map((link) => (
