@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  gap:18px;
+}
+.title {
+  color: gray;
+  font-weight: 500;
+}
+.username {
+  font-weight: 500;
+}
+
+.avatar {
+  object-fit: cover;
+  height: 3.5vw;
+  width: 3.5vw;
+  border-radius: 50%;
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media screen and (max-width:1024px) {
+  .avatar {
+    height: 5vw;
+    width: 5vw;
+    border-radius: 50%;
+  }
+  
+}
+
+@media screen and (max-width:768px) {
+  .avatar {
+    height: 7vw;
+    width: 7vw;
+    border-radius: 50%;
+  }
+  
+}
+@media screen and (max-width:640px) {
+  .avatar {
+    height: 9vw;
+    width: 9vw;
+    border-radius: 50%;
+  }
+  
+}
